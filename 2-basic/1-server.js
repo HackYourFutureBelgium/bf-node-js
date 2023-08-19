@@ -38,7 +38,7 @@ writeToFile();
 
 // read file
 
-// Promised
+// promises
 const readFromAFile = async () => {
     const data = await fs.promises.readFile('./2-basic/sample.txt', 'utf-8');
     console.log(data);
@@ -52,3 +52,4 @@ fs.readFile('./2-basic/name.txt', 'utf8', (err, data) => {
     }
     console.log('Read file', data);
 });
+
