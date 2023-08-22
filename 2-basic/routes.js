@@ -1,4 +1,10 @@
 import fs from 'fs';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// get the current module's directory path
+const __filename = fileURLToPath(import.meta.url);
+const PATH = dirname(__filename);
 
 const requestHandler = (req, res) => {
     // get the url and method from the req
@@ -18,7 +24,7 @@ const requestHandler = (req, res) => {
                 </body>
             </html>`
         );
-        res.end();
+        return res.end();
     }
 
     if (url === '/message' && method === 'POST') {
@@ -32,15 +38,15 @@ const requestHandler = (req, res) => {
             const parsedBody = Buffer.concat(body).toString();
             // the parsedBody will be like that message=hello
             const message = parsedBody.split('=')[1];
-            fs.writeFile('./2-basic/message.txt', message, (err) => {
+            fs.writeFile(path.join(PATH, 'message.txt'), message, (err) => {
                 if (err) {
-                    console.error(err.message);
+                    console.error(err);
                 }
             });
             // redirect to
             res.statusCode = 302;
             res.setHeader('Location', '/');
-            res.end();
+            return res.end();
         });
     }
 };

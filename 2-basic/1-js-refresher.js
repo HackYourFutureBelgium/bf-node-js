@@ -1,4 +1,4 @@
-// Variables : container to store data
+// variables : container to store data
 const firstName = 'John';
 const age1 = 26;
 const gender = 'M';
@@ -35,12 +35,11 @@ const addNums = (...args) => {
 
 console.log(addNums(1, 2, 3, 4));
 
-// destructing
+// destructuring
 const { age } = person;
 console.log(age);
 
 // asynchronous programming
-
 setTimeout(() => {
     console.log('Hi');
 }, 2 * 1000);

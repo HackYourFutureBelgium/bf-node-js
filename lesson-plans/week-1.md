@@ -7,11 +7,11 @@
 - [HTTP and HTML](./1-intro/http-html.md)
 - [Basic web app configuration](./1-intro/basic-web-app-cofiguration.md)
 
-## Basic
+## Node.js
 
-- [JavaScript refresher](./2-basic/0-server.js)
+- [JavaScript refresher](./2-basic/1-js-refresher.js)
 - [What is Node.js](./2-basic/what-is-node.md)
-- [fs module](./2-basic/1-server.js)
-- [Build your first sever using node](./2-basic/2-server.js)
+- [fs module](./2-basic/2-fs-module.js)
+- [Create your first sever using node](./2-basic/3-create-node-server.js)
 
 ## Debugging
