@@ -7,7 +7,7 @@ The Node.js file system module allows you to work
 with the file system on your computer. 
 */
 
-// Get the current module's directory path
+// get the current module's directory path
 const __filename = fileURLToPath(import.meta.url);
 const PATH = dirname(__filename);
 
@@ -18,7 +18,7 @@ replaces the specified file and content if it exists. If the file does not exist
 a new file, containing the specified content, will be created
 */
 
-// Write to the file
+// write to the file
 const nameToSave = 'John Doe';
 const filePath = path.join(PATH, 'name.txt');
 fs.writeFile(filePath, nameToSave, 'utf8', (err) => {
@@ -33,7 +33,7 @@ read file
 =========
 used to read files on your computer.
 */
-// Read from the file
+// read from the file
 fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
         console.error(err);
@@ -46,7 +46,7 @@ appendFile
 ==========
 appends the specified content at the end of the specified file
 */
-// Append content to the file
+// append content to the file
 const contentToAppend = ' This is some additional content.';
 fs.appendFile(filePath, contentToAppend, 'utf8', (err) => {
     if (err) {
@@ -82,7 +82,7 @@ fs.open(filePath, 'r', (err, fileDescriptor) => {
             console.log('read a file successfully after opening it', data);
         });
 
-        // Close the file
+        // close the file
         fs.close(fileDescriptor, (err) => {
             if (err) {
                 console.error('Error closing file:', err);
