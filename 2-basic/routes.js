@@ -42,11 +42,11 @@ const requestHandler = (req, res) => {
                 if (err) {
                     console.error(err);
                 }
+                // redirect to
+                res.statusCode = 302;
+                res.setHeader('Location', '/');
+                return res.end();
             });
-            // redirect to
-            res.statusCode = 302;
-            res.setHeader('Location', '/');
-            return res.end();
         });
     }
 };

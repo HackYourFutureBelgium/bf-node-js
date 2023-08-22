@@ -7,7 +7,7 @@
 - [HTTP and HTML](../1-intro/http-html.md)
 - [Basic web app configuration](../1-intro/basic-web-app-cofiguration.md)
 
-## Node.js
+## Node.js basic
 
 - [JavaScript refresher](../2-basic/1-js-refresher.js)
 - [What is Node.js](../2-basic/0-what-is-node.md)
