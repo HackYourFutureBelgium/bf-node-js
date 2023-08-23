@@ -16,3 +16,7 @@
 - [Event loop in node](../2-basic/4-event-loop.md)
 
 ## Debugging
+
+- [NPM](../3-debugging/npm.md)
+- [Errors types](../3-debugging/errorTypes.js)
+- [Debugger launch](../3-debugging/debugger-launch.md)
