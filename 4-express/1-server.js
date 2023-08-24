@@ -2,19 +2,19 @@ import express from 'express';
 
 // initialize express
 const app = express();
-const PORT = 3000;
 
 // middleware
 app.use((req, res, next) => {
-    console.log('Hello there ');
-    next();
+    console.log('Hello form the middleware ');
+    next(); // allows the req to continue
 });
 
-// route
+// routes
 app.get('/', (req, res) => {
-    res.status(200).send('<h1>Hello there</h1>');
+    res.send('<h1>Hello from express</h1>');
 });
 
+const PORT = 3000;
 // listen
 app.listen(PORT, () => {
     console.log(`Server is up and running at port : ${PORT}`);

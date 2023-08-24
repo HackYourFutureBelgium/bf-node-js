@@ -9,7 +9,7 @@ Middleware functions are functions that have access to the request object (req),
 Here's how you can use a middleware:
 
 ```Js
-app.use(function (req, res, next) {
+app.use((req, res, next)  => {
   console.log('Time:', Date.now());
   next();
 });
@@ -26,8 +26,8 @@ The request object (req) represents the HTTP request and has properties for the 
 Example of accessing request body:
 
 ```Js
-app.post('/login', function (req, res) {
-var username = req.body.username;
+app.post('/login',  (req, res) => {
+const username = req.body.username;
 // ...
 });
 ```
@@ -50,7 +50,7 @@ Routing is the process of defining how an application responds to a client reque
 Here's an example of defining a simple route:
 
 ```Js
-app.get('/', function (req, res) {
+app.get('/',  (req, res) => {
   res.send('Welcome to the homepage!');
 });
 
@@ -65,7 +65,7 @@ Example using EJS:
 ```Js
 app.set('view engine', 'ejs');
 
-app.get('/about', function (req, res) {
+app.get('/about',  (req, res) => {
   res.render('about');
 });
 

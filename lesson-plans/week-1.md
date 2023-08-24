@@ -25,3 +25,6 @@
 
 - [What is express](../4-express/express.md)
 - [Build a server using express](../4-express/1-server.js)
+- [Send data with the request](../4-express/2-server.js)
+- [Express router](../4-express/express-router/server.js)
+- [Create HTML pages](../4-express/html-pages/server.js)
