@@ -15,3 +15,12 @@
 
 - [What is Node.js](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
 - [Node.js full course](https://www.youtube.com/watch?v=pkg0J6lpKT4)
+
+## Debugging
+
+- [Debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started)
+- [Node.js debugging in VsCode](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+
+## Express
+
+- [express js](https://expressjs.com/)
