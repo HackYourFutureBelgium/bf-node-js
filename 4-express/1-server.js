@@ -12,10 +12,10 @@ app.use((req, res, next) => {
 
 // route
 app.get('/', (req, res) => {
-    res.send('<h1>Hello there</h1>');
+    res.status(200).send('<h1>Hello there</h1>');
 });
 
 // listen
 app.listen(PORT, () => {
-    `Server is up and running at port : ${PORT}`;
+    console.log(`Server is up and running at port : ${PORT}`);
 });
