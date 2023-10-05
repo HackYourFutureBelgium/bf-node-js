@@ -8,6 +8,7 @@ import shopRoutes from './routes/shop.js';
 const app = express();
 
 // parse body
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // use routers

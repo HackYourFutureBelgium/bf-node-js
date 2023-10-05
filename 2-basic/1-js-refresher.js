@@ -1,14 +1,15 @@
 // variables : container to store data
-const firstName = 'John';
-const age1 = 26;
-const gender = 'M';
+const firstName = 'John'; // string
+const age1 = 26; // number
+const gender = 'M'; // string
+const isNice = true; // boolean
 
 // functions
-const introduction = () => {
-    return `Name is ${firstName}, age ${age1} and the gender is ${gender}`;
+const introduction = (firstName, age, gender) => {
+    return `Name is ${firstName}, age ${age} and the gender is ${gender}`;
 };
 
-console.log(introduction());
+console.log(introduction(firstName, age1, gender));
 
 // objects
 const person = {

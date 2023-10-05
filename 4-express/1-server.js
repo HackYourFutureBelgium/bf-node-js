@@ -19,3 +19,5 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is up and running at port : ${PORT}`);
 });
+
+// https://expressjs.com/en/5x/api.html#app.use

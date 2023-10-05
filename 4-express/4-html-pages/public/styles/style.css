@@ -8,14 +8,14 @@ header {
     background-color: #4caf50;
     color: white;
 }
-nav ul {
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-around;
 }
-nav a {
+a {
     text-decoration: none;
     color: white;
     padding: 15px;

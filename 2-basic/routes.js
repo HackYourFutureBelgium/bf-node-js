@@ -8,8 +8,7 @@ const PATH = dirname(__filename);
 
 const requestHandler = (req, res) => {
     // get the url and method from the req
-    const url = req.url;
-    const method = req.method;
+    const { url, method } = req;
     // if the url is the root route
     if (url === '/') {
         res.setHeader('Content-Type', 'text/html');

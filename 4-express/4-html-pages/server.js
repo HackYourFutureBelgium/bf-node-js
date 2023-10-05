@@ -13,14 +13,14 @@ import shopRoutes from './routes/shop.js';
 const app = express();
 
 // parse body
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // serve static folder
 app.use(express.static(path.join(PATH, 'public')));
 
 // use routers
-app.use(shopRoutes);
+app.use('/shop', shopRoutes);
 
 // handle 404
 app.use((req, res) => {

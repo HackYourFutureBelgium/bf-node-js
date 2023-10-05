@@ -7,7 +7,8 @@ Syntax errors
 ============
 
 In general they are easy to fix, your VsCode will help you to identify these errors,
-and when your run your code you see an error in VsCode console immediately, which is sometimes not that helpful.
+and when your run your code you see an error in VsCode console immediately, which is 
+sometimes not that helpful.
 */
 
 const firstName = 'John';

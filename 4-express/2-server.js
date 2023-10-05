@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 const app = express();
 
 // parse req body, express doesn't parse the body, that is why we need to use bodyParser
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // middleware
