@@ -13,7 +13,6 @@ const products = [];
 
 // get products
 router.get('/products', (req, res) => {
-    console.log(products);
     res.render('addProduct', { title: 'Add Product', path: '/addProduct' });
 });
 

@@ -15,11 +15,11 @@ const PORT = process.env.PORT || 3005;
 const app = express();
 
 // set template engine
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views', path.join(PATH, 'views'));
 
 // parse body
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // serve static folder
@@ -36,7 +36,7 @@ app.use(shopRoutes.router);
 
 // handle 404
 app.use((req, res) => {
-    res.status(404).render('404', { title: 'Page not Found' });
+    res.status(404).render('404', { title: 'Page not Found!' });
 });
 
 // listen
