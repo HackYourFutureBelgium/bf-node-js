@@ -15,6 +15,78 @@ Various programming languages are available for backend development, such as Jav
 
 ## Learning Objectives
 
+1. Introduction to Node.js
+
+- What is Node.js?
+- Node.js vs. Browser JavaScript
+- Server-side JavaScript
+- Non-blocking I/O
+- Event-driven architecture
+
+2. Setting Up Node.js
+
+- Installing Node.js and npm
+- Version management with nvm
+- Creating your first Node.js script
+- Running scripts with Node.js
+
+3. Modules and npm
+
+- Importing and exporting modules
+- Creating and publishing npm packages
+- Managing dependencies with package.json
+- Installing and updating packages
+
+4. File System Operations
+
+- Reading and writing files
+- Working with directories
+- Asynchronous vs. Synchronous file operations
+
+5. Debugging Node.js Applications
+
+- Debugging tools and techniques
+- Using the Node.js debugger
+- Debugging memory leaks
+
+- Understanding callbacks
+- Callback hell and how to avoid it
+- Error-first callback pattern
+
+6. Event Loop and Callbacks
+
+- Event-driven programming model
+- EventEmitter class
+- Handling events with callbacks
+
+7. HTTP Server with Node.js
+
+- Creating a basic HTTP server
+- Handling HTTP requests and responses
+- Routing in a server
+
+8. Express.js Framework
+
+- Introduction to Express.js
+- Creating routes and handling requests
+- Middleware and its role in Express.js
+
+9. Middleware in Express.js
+
+- Writing custom middleware
+- Built-in middleware for common tasks
+- Error handling middleware
+
+10. RESTful APIs with Express.js
+
+- Designing RESTful APIs
+- Handling CRUD operations
+- Express.js for API development
+
+11. Authentication and Authorization
+
+- User authentication strategies
+
 ## class recording
 
 <details>
