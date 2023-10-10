@@ -95,6 +95,8 @@ Various programming languages are available for backend development, such as Jav
 
 ### Week1
 
+- [Day 1](https://youtu.be/beydNqavF4A)
+
 ### Week2
 
 ### Week3
