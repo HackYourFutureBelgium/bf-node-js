@@ -34,18 +34,39 @@ const requestHandler = (req, res) => {
         });
         // add event end to req
         req.on('end', () => {
-            const parsedBody = Buffer.concat(body).toString();
-            // the parsedBody will be like that message=hello
-            const message = parsedBody.split('=')[1];
-            fs.writeFile(path.join(PATH, 'message.txt'), message, (err) => {
-                if (err) {
-                    console.error(err);
+            try {
+                const parsedBody = Buffer.concat(body).toString();
+                // the parsedBody will be like that message=hello
+                const message = parsedBody.split('=')[1];
+                if (!message) {
+                    res.statusCode = 400;
+                    res.setHeader('Content-Type', 'text/plain');
+                    return res.end('Bad Request: Message is missing');
+                } else {
+                    fs.writeFile(
+                        path.join(PATH, 'message.txt'),
+                        message,
+                        (err) => {
+                            if (err) {
+                                throw err;
+                            } else {
+                                // redirect to
+                                res.statusCode = 302;
+                                res.setHeader('Location', '/');
+                                return res.end();
+                            }
+                        }
+                    );
                 }
-                // redirect to
-                res.statusCode = 302;
-                res.setHeader('Location', '/');
-                return res.end();
-            });
+            } catch (err) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'text/plain');
+                res.end('Internal Server Error');
+            }
+        });
+
+        req.on('error', (error) => {
+            console.error(error);
         });
     }
 };

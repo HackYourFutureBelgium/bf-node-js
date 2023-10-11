@@ -11,6 +11,7 @@ with the file system on your computer.
 const __filename = fileURLToPath(import.meta.url);
 const PATH = dirname(__filename);
 
+// Asynchronous File Operations:
 /* 
 write file
 ==========
@@ -57,42 +58,6 @@ fs.appendFile(filePath, contentToAppend, 'utf8', (err) => {
 });
 
 /*
-open
-====
-method takes a "flag" as the second argument, if the flag is "w" for "writing",
-the specified file is opened for writing and "r" for reading.If the file does not exist,
-an empty file is created
-*/
-
-// open a file
-fs.open(filePath, 'r', (err, fileDescriptor) => {
-    if (err) {
-        console.error('Error opening file:', err);
-    } else {
-        console.log(
-            'File opened successfully! File Descriptor:',
-            fileDescriptor
-        );
-
-        // read the file
-        fs.readFile(filePath, 'utf8', (err, data) => {
-            if (err) {
-                console.error(err);
-            }
-            console.log('read a file successfully after opening it', data);
-        });
-
-        // close the file
-        fs.close(fileDescriptor, (err) => {
-            if (err) {
-                console.error('Error closing file:', err);
-            } else {
-                console.log('File closed successfully!');
-            }
-        });
-    }
-});
-/*
 unlink
 ======
 method deletes the specified file
@@ -105,3 +70,38 @@ fs.unlink(filePath, (err) => {
         console.log('File deleted successfully!');
     }
 });
+
+// Synchronous File Operations:
+
+// Write a File Synchronously:
+
+try {
+    fs.writeFileSync(filePath, 'This is a synchronous write operation.');
+    console.log('File written synchronously');
+} catch (err) {
+    console.error(err);
+}
+
+// Read a File Synchronously:
+try {
+    const data = fs.readFileSync('example.txt', 'utf-8');
+    console.log('File contents synchronously:', data);
+} catch (err) {
+    console.error(err);
+}
+
+// Append to a File Synchronously:
+try {
+    fs.appendFileSync('example.txt', '\nThis is an appended line.');
+    console.log('File appended synchronously');
+} catch (err) {
+    console.error(err);
+}
+
+// Delete a File Synchronously:
+try {
+    fs.unlinkSync('example.txt');
+    console.log('File deleted synchronously');
+} catch (err) {
+    console.error(err);
+}
