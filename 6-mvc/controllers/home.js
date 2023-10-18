@@ -9,10 +9,10 @@ const homeControllers = {
         });
     },
     getBook: (req, res) => {
-        const id = Number(req.params.id);
+        const { id } = req.params;
         res.render('book', {
             id: id,
-            title: 'Books',
+            title: 'Book',
             path: '/book',
             book: Book.getBookById(id)
         });

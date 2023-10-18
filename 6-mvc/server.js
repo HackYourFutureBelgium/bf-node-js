@@ -7,10 +7,10 @@ import dotenv from 'dotenv';
 import homeRoutes from './routes/home.js';
 
 dotenv.config();
+const PORT = process.env.PORT || 3005;
 
 const __filename = fileURLToPath(import.meta.url);
 const PATH = dirname(__filename);
-const PORT = process.env.PORT || 3005;
 
 // initialize express
 const app = express();
@@ -26,7 +26,7 @@ app.use(express.json());
 // serve static folder
 app.use(express.static(path.join(PATH, 'public')));
 
-// use routers
+// use routes
 app.use(homeRoutes);
 
 // handle 404
@@ -38,5 +38,3 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is up and running at port : ${PORT}`);
 });
-
-// https://dev.to/eetukudo_/understanding-mvc-pattern-in-nodejs-2bdn
