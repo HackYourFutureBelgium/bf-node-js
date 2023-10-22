@@ -135,3 +135,7 @@ When working with sessions and cookies, security is crucial. Be aware of common 
 Sessions and cookies are powerful tools in web development, enabling you to create dynamic and personalized web applications. In this guide, we've covered the basics of setting up sessions and cookies in Express, but there's much more to explore, especially in terms of security and scalability. Make sure to consult the Express.js and related libraries' documentation for more advanced use cases.
 
 Remember that maintaining user data is a responsibility that should be approached with caution, as it directly impacts your users' privacy and security.
+
+### More Info
+
+- [csrf attack](./csrf.md)
