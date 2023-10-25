@@ -108,6 +108,9 @@ Various programming languages are available for backend development, such as Jav
 - [Day 7](https://youtu.be/7oILDBKi_C4)
 - [Day 8](https://youtu.be/rEyuXz5khvc)
 - [Cat API](https://youtu.be/H_cIiSgYFgo)
+- [Day 9](https://youtu.be/ozpjb8eFEZs)
+- [Day 10](https://youtu.be/Q0HaXSC_ldE)
+- [Day 11](https://youtu.be/uOaOxe51rE4)
 
 ### Week3
 
