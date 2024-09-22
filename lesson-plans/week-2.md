@@ -7,7 +7,7 @@
 ## Authentication and Authorization
 
 - [Sessions and cookies](../07-sessions-and-cookies/README.md)
-- [Authentication](../08-authentication/README.md)
+- [jwt](../08-authentication/README.md)
 
 ## Projects
 
